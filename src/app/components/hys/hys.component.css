@@ -1,0 +1,9 @@
+.row{
+    background: linear-gradient(to right, #0c004d, #0d0022,#34004d);
+    padding: 20px;
+}
+.circulo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

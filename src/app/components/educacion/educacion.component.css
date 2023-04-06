@@ -1,0 +1,8 @@
+.row{
+    padding: 20px;
+    background: linear-gradient(to right, #0c004d, #0d0022,#34004d);
+}
+
+h1, h3{
+    display: inline;
+}

@@ -1,0 +1,45 @@
+<section class="vh-100">
+  <div class="container py-5 h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+    <div class="card shadow-2-strong" style="border-radius: 1rem;background: linear-gradient(to right, #0c004d, #0d0022,#34004d);">
+        <div class="card-body p-5">
+
+          <div class="container" *ngIf="persona">
+            <div class="row">
+              <div>
+                  <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                     <div class="form-group">
+                         <label for="apellido" style="color: white;">Apellido</label>
+                         <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                     </div>
+                    <div class="form-group">
+                          <label for="nombre" style="color: white;">Nombre</label>
+                         <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                     </div>
+                     <div class="form-group">
+                         <label for="descripcion" style="color: white;">Descripcion</label>
+                         <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                     </div>
+                     <div class="form-group">
+                          <label for="img" style="color: white;">Imagen</label>
+                         <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                     </div>
+                     <div class="imagen">
+                      <img [src]="imageService.url" width="220" >
+
+                    </div>
+                     <br>
+                      <button class="btn btn-success">Editar Perfil</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</section>
