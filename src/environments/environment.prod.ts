@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '695759157320',
   },
   production: true,
-  URL: ''
+  URL: 'https://awkward-yoko-llopiu.koyeb.app/'
 };
