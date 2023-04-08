@@ -4,16 +4,17 @@
 
 export const environment = {
   firebase: {
-    projectId: 'frontend-ull-bdd20',
-    appId: '1:695759157320:web:7742861b9895b9441e407d',
-    storageBucket: 'frontend-ull-bdd20.appspot.com',
+    projectId: 'frontendull-3cead',
+    appId: '1:576694743774:web:755687c69b18ab085b484f',
+    storageBucket: 'frontendull-3cead.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyAcp2UqckAUWSA8aOZV00jaJ2xvFn7V1xE',
-    authDomain: 'frontend-ull-bdd20.firebaseapp.com',
-    messagingSenderId: '695759157320',
+    apiKey: 'AIzaSyDLtFOIVtE7llPOYbZHbWZZ2Auo7I0VOwo',
+    authDomain: 'frontendull-3cead.firebaseapp.com',
+    messagingSenderId: '576694743774',
   },
 
-  production: false,
+
+  production: true,
   URL: 'https://awkward-yoko-llopiu.koyeb.app/'
 };
 
