@@ -10,5 +10,5 @@ export const environment = {
   },
 
   production: true,
-  URL: 'https://awkward-yoko-llopiu.koyeb.app/'
+  URL: 'https://backendull.onrender.com/'
 };

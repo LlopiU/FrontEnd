@@ -4,17 +4,18 @@
         Editar Perfil</button>
     </div>
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" style="background: #0c004d">
-            <img src={{persona.img}} class="img-fluid" id="fotodeperfil">
+            <img [src]="persona?.img ? persona.img : 'https://media.licdn.com/dms/image/v2/C4E03AQGg8o9YHIOzeA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1562089575327?e=1773273600&v=beta&t=ySds0fCaIq1UxAm6HgmM2yYPYAxEWwDY5_ggTMTrZ2c'" 
+             class="img-fluid" id="fotodeperfil">
         </div>
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" style="background: #0c004d">
-            <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
+            <p id="nombre">{{persona?.nombre || 'Ulises Alan'}} {{persona?.apellido || 'Llopi'}}</p>
             <p style="color: white;">Full Stack Developer Jr</p>
 
         </div>
         <div class="col-xs-12 col-sm-8 col-md-2 col-lg-8">
             <span>
                 <h1 style="color: white;">Acerca de mi</h1>
-                    <p style="color: white;">{{persona.descripcion}}</p>
+                    <p style="color: white;">{{persona?.descripcion}}</p>
             </span>
         </div>
 </div>
