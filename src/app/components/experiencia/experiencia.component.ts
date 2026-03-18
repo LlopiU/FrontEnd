@@ -30,21 +30,50 @@ export class ExperienciaComponent implements OnInit {
     const experienciasHardcoded: Experiencia[] = [
       {
         id: 1,
-        nombreE: 'Desarrollo Web Next.js',
-        descripcionE:
-          'Desarrollo de una pagina web con Next.js y React para el centro de estudiantes de mi facultad.',
-      },
-      {
-        id: 2,
         nombreE: 'Pasantía IT',
         descripcionE:
           'Realice una pasantia de 3 meses en TelCo SAPEM como desarrollo web con Vue.js.',
       },
       {
-        id: 3,
-        nombreE: 'Full Stack Developer Jr',
+        id: 2,
+        nombreE: 'Desarrollador Web Vue.js y Golang',
         descripcionE:
-          'Desarrollo de aplicaciones web utilizando el stack MEAN/MERN.',
+          'Trabajo actualemente en TelCo SAPEM como desarrollador web full stack utilizando como frontend Vue y como backend a golang',
+      },
+      {
+        id: 2,
+        nombreE: 'Desarrollador Mobile React Native + Expo',
+        descripcionE:
+          'Trabaje en TelCo SAPEM como desarrollador Mobile utilizando como tecnologia React-Native',
+      },
+      {
+        id: 3,
+        nombreE:
+          'Coordinador de Comunidad y Capacitaciones en la Organización TECHO Argentina',
+        descripcionE:
+          'lideré equipos para la construcción efectiva y con excelencia de viviendas de emergencia en los barrios populares de la región, asimismo, coordiné capacitaciones, la gestión y organización del voluntariado.',
+      },
+
+      {
+        id: 4,
+        nombreE:
+          'Secretario de Ingeniería en Sistemas en la UTN, Facultad Regional Resistencia',
+        descripcionE:
+          'colaboré en proyectos estudiantiles y de apoyo a alumnos.',
+      },
+      {
+        id: 5,
+        nombreE:
+          'Tutor Universitario en la materia Algoritmos y Estructuras de Datos',
+        descripcionE:
+          'brindé apoyo técnico y pedagógico a estudiantes para la comprensión y aplicación de conceptos de la materia como: listas enlazadas, árboles, grafos, complejidad algorítmicas, y lideré sesiones de tutoría, talleres prácticos enfocados en la resolución de problemas y la implementación de soluciones.',
+      },
+      {
+        id: 6,
+        nombreE:
+          'Investigador de la beca BAR de mi facultad (UTN, Facultad Regional Resistencia)',
+        descripcionE:
+          'Realice una investigacion sobre las distintas metodologias agiles para aplicarla a la enseñanza',
       },
     ];
 

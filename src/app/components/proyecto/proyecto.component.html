@@ -1,43 +1,85 @@
 <div class="row">
-  <h1 style="color: white;">Proyectos Realizados</h1>
-    <div class="col-lg-2">
-      <button type="button" class="btn btn-success" routerLink="/nuevoproyecto" *ngIf="isLogged" style="color: white;">
-        Nuevo Proyecto
-      </button>
-    </div>
+  <h1 style="color: white">Proyectos Realizados</h1>
+  <div class="col-lg-2">
+    <button
+      type="button"
+      class="btn btn-success"
+      routerLink="/nuevoproyecto"
+      *ngIf="isLogged"
+      style="color: white"
+    >
+      Nuevo Proyecto
+    </button>
+  </div>
   <div class="col lg 1"></div>
   <div class="col-lg-11">
     <table class="table">
       <tbody>
-          <tr *ngFor="let Proyecto of proy">
-
-            <td >
-              <td>
-                  <h2 style="color: white;">{{Proyecto.nombreP}}</h2>
-                    <p style="color: white;">{{Proyecto.descripcionP}}</p>
-               </td>
-               <td>
-                <img src={{Proyecto.imgP}} class="img-fluid" id="imgP" style="float: right;" width="300px">
-
-              </td>
-               <td>
-                <button class="btn btn-dark" routerLink ="/editproyecto/{{Proyecto.id}}" *ngIf="isLogged">
-                  <i class="bi bi-pencil-fill"></i>EDITAR
-                </button>
-              </td>
-                <td>
-              <button class="btn btn-danger" (click)="delete(Proyecto.id)" *ngIf="isLogged">
-                <i class="bi bi-trash-fill"></i>Borrar
-              </button>
-            </td>
-
-
-
-          </tr>
-
+        <tr *ngFor="let Proyecto of proy">
+          <td></td>
+          <td>
+            <h2 style="color: white">{{ Proyecto.nombreP }}</h2>
+            <p style="color: white">{{ Proyecto.descripcionP }}</p>
+          </td>
+          <td>
+            <ng-container *ngIf="Proyecto.urlP; else plainImg">
+              <a
+                *ngIf="Proyecto.urlP?.startsWith('http')"
+                [href]="Proyecto.urlP"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  [src]="Proyecto.imgP"
+                  class="img-fluid"
+                  id="imgP"
+                  style="float: right"
+                  width="300px"
+                />
+              </a>
+              <a
+                *ngIf="!Proyecto.urlP?.startsWith('http')"
+                [routerLink]="Proyecto.urlP"
+              >
+                <img
+                  [src]="Proyecto.imgP"
+                  class="img-fluid"
+                  id="imgP"
+                  style="float: right"
+                  width="300px"
+                />
+              </a>
+            </ng-container>
+            <ng-template #plainImg>
+              <img
+                [src]="Proyecto.imgP"
+                class="img-fluid"
+                id="imgP"
+                style="float: right"
+                width="300px"
+              />
+            </ng-template>
+          </td>
+          <td>
+            <button
+              class="btn btn-dark"
+              routerLink="/editproyecto/{{ Proyecto.id }}"
+              *ngIf="isLogged"
+            >
+              <i class="bi bi-pencil-fill"></i>EDITAR
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-danger"
+              (click)="delete(Proyecto.id)"
+              *ngIf="isLogged"
+            >
+              <i class="bi bi-trash-fill"></i>Borrar
+            </button>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
-
 </div>
-
